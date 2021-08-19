@@ -15,6 +15,7 @@ public class UserMapperTest {
     //动态插入
     @Test
     public void insert() throws Exception {
+        //注意数据库连接配置与数据库和表的字符编码一一对应
         UserModel userModel1 = UserModel.builder().name("路人甲Java").build();
         UserUtil.callMapper(UserMapper.class, mapper -> {
             mapper.insert(userModel1);

@@ -26,21 +26,21 @@ public class UserUtil {
 
     @FunctionalInterface
     public interface SessionCall<O> {
-        O call(SqlSession session) throws Exception;
+        O SessionCall(SqlSession session) throws Exception;
     }
 
     @FunctionalInterface
     public interface MapperCall<T, O> {
-        O call(T mapper) throws Exception;
+        O mappercall(T mapper) throws Exception;
     }
 
     public static <T, O> O callMapper(Class<T> tClass, MapperCall<T, O> mapper) throws Exception {
-        return call(session -> mapper.call(session.getMapper(tClass)));
+        return call(session -> mapper.mappercall(session.getMapper(tClass)));
     }
 
     public static <O> O call(SessionCall<O> sessionCall) throws Exception {
         try (SqlSession session = sqlSessionFactory.openSession(true);) {
-            return sessionCall.call(session);
+            return sessionCall.SessionCall(session);
         }
     }
 
