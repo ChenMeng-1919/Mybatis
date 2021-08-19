@@ -5,9 +5,9 @@
 <configuration>
     <properties>
         <property name="driver" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/javacode2018?characterEncoding=UTF-8"/>
+        <property name="url" value="jdbc:mysql://8.140.29.174:3306/javacode2018?characterEncoding=UTF-8"/>
         <property name="username" value="root"/>
-        <property name="password" value="root123"/>
+        <property name="password" value="123654"/>
     </properties>
     <environments default="development">
         <environment id="development">
