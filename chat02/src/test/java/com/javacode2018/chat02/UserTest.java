@@ -35,7 +35,7 @@ public class UserTest {
     public void insertUser() {
         try (SqlSession sqlSession = this.sqlSessionFactory.openSession(true);) {
             //创建UserModel对象
-            UserModel userModel = UserModel.builder().id(System.currentTimeMillis()).name("路人甲Java").age(30).salary(50000D).sex(1).build();
+            UserModel userModel = UserModel.builder().id(1L).name("路人甲Java").age(30).salary(50000D).sex(1).build();
             //执行插入操作
             int insert = sqlSession.insert("com.javacode2018.chat02.UserMapper.insertUser", userModel);
             log.info("影响行数：{}", insert);
