@@ -1,5 +1,7 @@
 package com.javacode2018.chat02;
 
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 /**
@@ -15,5 +17,5 @@ public interface UserMapper {
 
     List<UserModel> getUserList();
 
-    List<UserModel> getUserByUserIdAndName(long id, String name);
+    List<UserModel> getUserByUserIdAndName(@Param("id") long id, @Param("name") String name);
 }

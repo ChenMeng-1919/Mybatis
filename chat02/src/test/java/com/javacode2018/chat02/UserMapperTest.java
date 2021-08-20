@@ -83,7 +83,7 @@ public class UserMapperTest {
         try (SqlSession sqlSession = this.sqlSessionFactory.openSession(true);) {
             UserMapper mapper = sqlSession.getMapper(UserMapper.class);
             //执行查询操作
-            List<UserModel> userModelList = mapper.getUserByUserIdAndName(1L, null);
+            List<UserModel> userModelList = mapper.getUserByUserIdAndName(1L, "路人甲Java");
             userModelList.forEach(item -> {
                 log.info("{}", item);
             });
