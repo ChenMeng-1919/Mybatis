@@ -7,11 +7,16 @@
         <property name="jdbc.driver" value="com.mysql.jdbc.Driver"/>
         <property name="jdbc.url" value="jdbc:mysql://8.140.29.174:3306/javacode2018?characterEncoding=UTF-8"/>
         <property name="jdbc.username" value="root"/>
-        <property name="jdbc.password" value="root"/>
+        <property name="jdbc.password" value="123654"/>
     </properties>
+    <!--通过配置包的别名扫描，别名自动为小写-->
     <typeAliases>
         <package name="com.javacode2018.chat03.demo1"/>
     </typeAliases>
+    <!--通过配置具体的实体类，起别名-->
+    <!--<typeAliases>
+        <typeAlias type="com.javacode2018.chat03.demo1.UserModel" alias="user" />
+    </typeAliases>-->
     <!-- 环境配置，可以配置多个环境 -->
     <environments default="chat04-demo1">
         <!-- 
@@ -33,6 +38,6 @@
 
     <mappers>
         <mapper resource="demo1/mapper/UserMapper.xml"/>
-        <mapper class="com.javacode2018.chat03.demo1.UserMapper" />
+        <!--<mapper class="com.javacode2018.chat03.demo1.UserMapper" />-->
     </mappers>
 </configuration>
