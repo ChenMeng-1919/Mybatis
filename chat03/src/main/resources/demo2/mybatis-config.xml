@@ -3,7 +3,6 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <
     <properties>
         <property name="jdbc.driver" value="com.mysql.jdbc.Driver"/>
         <property name="jdbc.url" value="jdbc:mysql://8.140.29.174:3306/javacode2018?characterEncoding=UTF-8"/>
