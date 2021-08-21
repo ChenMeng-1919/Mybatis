@@ -5,9 +5,9 @@
 <configuration>
     <properties>
         <property name="jdbc.driver" value="com.mysql.jdbc.Driver"/>
-        <property name="jdbc.url" value="jdbc:mysql://localhost:3306/javacode2018?characterEncoding=UTF-8"/>
+        <property name="jdbc.url" value="jdbc:mysql://8.140.29.174:3306/javacode2018?characterEncoding=UTF-8"/>
         <property name="jdbc.username" value="root"/>
-        <property name="jdbc.password" value="root123"/>
+        <property name="jdbc.password" value="123654"/>
     </properties>
     <!-- 环境配置，可以配置多个环境 -->
     <environments default="chat04-demo3">

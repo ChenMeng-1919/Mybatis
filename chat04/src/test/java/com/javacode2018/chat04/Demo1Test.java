@@ -73,9 +73,9 @@ public class Demo1Test {
     }
 
     private String jdbcDriver = "com.mysql.jdbc.Driver";
-    private String jdbcUrl = "jdbc:mysql://localhost:3306/javacode2018?characterEncoding=UTF-8";
+    private String jdbcUrl = "jdbc:mysql://8.140.29.174:3306/javacode2018?characterEncoding=UTF-8";
     private String jdbcUserName = "root";
-    private String jdbcPassword = "root123";
+    private String jdbcPassword = "123654";
 
     @Test
     public void jdbcInsertUser1() throws Exception {
