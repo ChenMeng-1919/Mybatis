@@ -39,10 +39,10 @@ public class Demo8Test {
         try (SqlSession sqlSession = this.sqlSessionFactory.openSession(true);) {
             UserMapper mapper = sqlSession.getMapper(UserMapper.class);
             Map<String, Object> paramMap = new HashMap<>();
-//            paramMap.put("id",1);
-//            paramMap.put("name", "张学友");
+            paramMap.put("id",1);
+            paramMap.put("name", "张学友");
             paramMap.put("idList", Arrays.asList(1, 2).stream().collect(Collectors.toList()));
-//            paramMap.put("likeName","java");
+            paramMap.put("likeName","java");
             paramMap.put("orderSql","order by id asc,age desc");
             List<UserModel> userModelList = mapper.getList1(paramMap);
             log.info("{}", userModelList);

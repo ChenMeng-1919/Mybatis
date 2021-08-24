@@ -4,11 +4,11 @@
 <mapper namespace="com.javacode2018.chat05.demo10.mapper.UserMapper">
 
     <select id="getList1" resultType="com.javacode2018.chat05.demo10.model.UserModel">
-        SELECT id,name,age,sex FROM t_user
+        SELECT id,name,age,sex FROM t_user_demo10
     </select>
 
     <insert id="insert1" parameterType="map">
-        insert into t_user (id,name,age,sex)
+        insert into t_user_demo10 (id,name,age,sex)
         VALUE (#{id},#{name},#{age},#{sex,javaType=com.javacode2018.chat05.demo10.enums.SexEnum})
     </insert>
 
