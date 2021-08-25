@@ -4,7 +4,7 @@
 <mapper namespace="com.javacode2018.chat05.demo9.mapper.UserMapper">
 
     <select id="getList1" resultType="com.javacode2018.chat05.demo9.model.UserModel" parameterType="map">
-        SELECT id,name,age FROM t_user
+        SELECT id,name,age FROM t_user_demo9
         <where>
             <if test="id!=null">
                 AND id = #{id}
@@ -19,11 +19,11 @@
     </select>
     
     <insert id="insert1" parameterType="com.javacode2018.chat05.demo9.model.UserModel">
-        INSERT INTO t_user (id,name,age) VALUES (#{id},#{name},#{age})
+        INSERT INTO t_user_demo9 (id,name,age) VALUES (#{id},#{name},#{age})
     </insert>
 
     <select id="getList2" flushCache="true" resultType="com.javacode2018.chat05.demo9.model.UserModel" parameterType="map">
-        SELECT id,name,age FROM t_user
+        SELECT id,name,age FROM t_user_demo9
         <where>
             <if test="id!=null">
                 AND id = #{id}
